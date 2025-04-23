@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { CarList } from "../components/CarList"
 import { Carro } from "../interfaces/carro";
 

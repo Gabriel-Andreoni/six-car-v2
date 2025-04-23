@@ -10,7 +10,7 @@ export function CarList({ carros }: CarrosData) {
     return (
         <ul className="w=full h-auto p-4 pt-24 flex flex-wrap gap-4">
             {carros.map((carro: Carro) => {
-                let images: string[] = JSON.parse(carro.images);
+                const images: string[] = JSON.parse(carro.images);
                 return (
                     <li
                         key={carro.id}
