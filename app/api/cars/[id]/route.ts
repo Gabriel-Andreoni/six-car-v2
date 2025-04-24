@@ -1,6 +1,6 @@
 import prisma from "@/app/lib/prisma";
 
-export async function GET(request: Request, { params }: { params }: { params: Promise<{ id: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
     try {
         const carId = parseInt(params.id);
 
