@@ -1,6 +1,6 @@
 import prisma from "@/app/lib/prisma";
 
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(request: Request) {
     try {
         const {pathname} = request.nextUrl;
         const segments = pathname.split('/');
