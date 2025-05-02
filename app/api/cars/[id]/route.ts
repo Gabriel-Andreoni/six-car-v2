@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
         const id = segments[segments.length - 1];
         
         const car = await prisma.carros.findUnique({
-            where: { id: id },
+            where: { id: Number(id) },
         });
 
         if (!car) {
