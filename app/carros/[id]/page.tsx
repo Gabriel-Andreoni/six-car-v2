@@ -3,7 +3,7 @@ import { Carro } from "@/app/interfaces/carro";
 export default async function CarDetails({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
-    const reqAPI = await fetch(`http://localhost:3000/api/cars/${id}`)
+    const reqAPI = await fetch(`/api/cars/${id}`)
     const carData = await reqAPI.json();
     const carro:Carro = carData.data;
 

@@ -6,7 +6,7 @@ interface CarrosData {
 }
 
 export default async function Carros() {
-    const data = await fetch('http://localhost:3000/api/cars');
+    const data = await fetch('/api/cars');
 
     const carros:CarrosData = await data.json();
 
