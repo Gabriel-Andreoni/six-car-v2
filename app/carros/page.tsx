@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { CarList } from "../components/CarList"
 import { Carro } from "../interfaces/carro";
 
