@@ -6,11 +6,7 @@ export async function GET(request: NextRequest) {
         const {pathname} = request.nextUrl;
         const segments = pathname.split('/');
         const id = segments[segments.length - 1];
-
-        if (isNaN(id)) {
-            return Response.json({ error: 'ID inválido' }, { status: 400 });
-        }
-
+        
         const car = await prisma.carros.findUnique({
             where: { id: id },
         });
