@@ -2,14 +2,16 @@ import prisma from "@/app/lib/prisma";
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
     try {
-        const carId = parseInt(params.id);
+        const {pathname} = request.nextUrl;
+        const segments = pathname.split('/');
+        const id = segments[segments.length - 1];
 
-        if (isNaN(carId)) {
+        if (isNaN(id)) {
             return Response.json({ error: 'ID inválido' }, { status: 400 });
         }
 
         const car = await prisma.carros.findUnique({
-            where: { id: carId },
+            where: { id: id },
         });
 
         if (!car) {
