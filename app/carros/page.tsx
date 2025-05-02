@@ -21,7 +21,7 @@ export default async function Carros() {
 
     } catch (error) {
         console.error('Error fetching data:', error);
-        return <div>Erro ao buscar os dados {(error as Error).message}</div>;
+        return <div>Erro ao buscar os dados</div>;
     }
 
 
